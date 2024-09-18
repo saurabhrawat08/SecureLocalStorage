@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "ESNext",
+      "lib": ["DOM", "ESNext"],
+      "jsx": "react-jsx",  // Use React JSX transform
+      "strict": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "declaration": true,  // Generate declaration files
+      "outDir": "dist",     // Output directory for compiled files
+      "sourceMap": true
+    },
+    "include": ["src"],      // Files to be compiled
+    "exclude": ["node_modules", "dist"]  // Exclude output and dependency folders
+  }
+  
