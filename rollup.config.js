@@ -5,7 +5,7 @@ import babel from '@rollup/plugin-babel';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 
 export default {
-  input: 'src/index.tsx',  // Entry point
+  input: 'src/index.ts',
   output: [
     {
       file: 'dist/index.js',

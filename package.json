@@ -1,9 +1,10 @@
 {
-  "name": "secure_localstorage",
+  "name": "secure-storify",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "type": "module",
   "keywords": [],
@@ -15,6 +16,7 @@
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@types/node": "^22.7.3",
     "@types/react": "^18.3.7",
     "@types/react-dom": "^18.3.0",
     "react": "^18.3.1",
@@ -23,6 +25,7 @@
     "typescript": "^5.6.2"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "jsencrypt": "^3.3.2"
   }
 }
