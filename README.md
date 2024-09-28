@@ -35,8 +35,131 @@ With SecureStorify, data stored in the browser's storage systems is encrypted be
   
 - **Data Privacy**: Ideal for storing sensitive user data, such as tokens, user preferences, and other personal information, in compliance with privacy regulations and security best practices.
 
-## Usage
+## Installation
 
-1. **Encrypt and Save Data**:
-   ```javascript
-   SecureStorify.setItem('userToken', 'your-sensitive-token');
+To install SecureStorify, run the following command:
+
+```bash
+npm install secure-storify
+```
+
+### Importing
+
+You can import SecureStorify into your project using the following statement:
+
+```javascript
+import { secureStorify } from 'secure-storify';
+```
+
+## Supported Storages
+
+### 1. localStorage
+
+Securely store and retrieve data in localStorage:
+
+#### Set Encrypted Data:
+
+```javascript
+secureStorify.localStorage.set('YourKey', 'YourValue');
+```
+#### Set Encrypted Data:
+
+```Get Decrypted Data:
+const value = secureStorify.localStorage.get('YourKey');
+```
+
+### 2. sessionStorage
+
+Store session-based data in sessionStorage with encryption:
+
+#### Set Encrypted Data:
+
+```javascript
+secureStorify.sessionStorage.set('YourKey', 'YourValue');
+```
+#### Set Encrypted Data:
+
+```Get Decrypted Data:
+const value = secureStorify.sessionStorage.get('YourKey');
+```
+
+### 3. IndexedDB
+
+Encrypt and store data in IndexedDB:
+
+#### Set Encrypted Data:
+
+```javascript
+secureStorify.indexedDB.set('YourDBName', 'YourStoreName', 'YourKey', 'YourValue');
+```
+#### Set Encrypted Data:
+
+```Get Decrypted Data:
+const value = secureStorify.indexedDB.get('YourDBName', 'YourStoreName', 'YourKey');
+```
+
+### 4. CacheStorage
+
+Encrypt and cache data in CacheStorage:
+
+#### Set Encrypted Data:
+
+```javascript
+secureStorify.cacheStorage.set('YourCacheName', 'YourKey', 'YourValue');
+```
+#### Set Encrypted Data:
+
+```Get Decrypted Data:
+const value = secureStorify.cacheStorage.get('YourCacheName', 'YourKey');
+```
+### Example Usage
+Here’s a simple example demonstrating how to use SecureStorify with different storage systems:
+
+#### localStorage
+
+```javascript
+// Set encrypted data in localStorage
+secureStorify.localStorage.set('userToken', '123456789');
+
+// Get decrypted data from localStorage
+const userToken = secureStorify.localStorage.get('userToken');
+console.log(userToken);  // Output: 123456789
+```
+#### sessionStorage
+
+```javascript
+// Set encrypted data in sessionStorage
+secureStorify.sessionStorage.set('sessionID', 'abcd-1234');
+
+// Get decrypted data from sessionStorage
+const sessionID = secureStorify.sessionStorage.get('sessionID');
+console.log(sessionID);  // Output: abcd-1234
+
+```
+
+#### IndexedDB
+
+```javascript
+// Set encrypted data in IndexedDB
+secureStorify.indexedDB.set('MyDatabase', 'MyStore', 'userID', '987654321');
+
+// Get decrypted data from IndexedDB
+const userID = secureStorify.indexedDB.get('MyDatabase', 'MyStore', 'userID');
+userID.then(value => console.log(value));  // Output: 987654321
+
+```
+
+#### CacheStorage
+
+```javascript
+// Set encrypted data in CacheStorage
+secureStorify.cacheStorage.set('MyCache', 'cacheKey', 'cacheValue');
+
+// Get decrypted data from CacheStorage
+const cacheValue = secureStorify.cacheStorage.get('MyCache', 'cacheKey');
+cacheValue.then(value => console.log(value));  // Output: cacheValue
+
+```
+## Conclusion
+
+SecureStorify offers a robust solution for securely managing sensitive data in various browser storage types. By utilizing RSA encryption, it ensures that your data remains protected, even in the event of a security breach. With its seamless integration into existing storage APIs, developers can easily enhance data security without extensive code changes, making it an essential tool for safeguarding user information.
