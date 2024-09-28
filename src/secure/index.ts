@@ -1,4 +1,4 @@
-import { setEncryptedLocalStorage, getDecryptedLocalStorage } from './hooks/secureLocalStorage';
+import { setEncryptedLocalStorage, getDecryptedLocalStorage } from './hooks/secureLocalstorage';
 import { setEncryptedSessionStorage, getDecryptedSessionStorage } from './hooks/secureSessionStorage';
 import { setEncryptedIndexedDB, getDecryptedIndexedDB } from './hooks/secureIndexedDB';
 import { setEncryptedCacheStorage, getDecryptedCacheStorage } from './hooks/secureCacheStorage';
